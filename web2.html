@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css를 배워봅시다!</title>
+        <!-- style 태그를 통해 각 태그에 붙일 스타일들을 변수로 치환합니다. -->
+        <style> 
+            a {
+                color: red;
+                text-decoration: underline;
+                border-width:2px;
+                border-color: rgb(136, 136, 136);
+                border-style:solid;
+            }
+            h1 {
+                font-size: 65px;
+                text-align:left;
+                border-width:2px;
+                border-color: red;
+                border-style:solid;
+            }
+            .i {
+                color:gray;
+                margin-top: 40px;
+            }
+            .j, #j {
+                margin-top:40px;
+            }
+            .k {
+                margin-top: 20px;
+            }
+        </style>
+        <!--
+            a는 하이퍼링크, h1은 제목 태그였습니다. 이는 각 제목이나 하이퍼링크의 속성을 일괄적으로 이렇게
+            쓰겠다는 뜻입니다. 각 속성은 디자이너가 줍니다! (적어도 adobe XD에서는요.) 아니면 검색하거나,
+            에디터에서도 속성에 대한 값을 표시해줍니다.
+            i 앞에 붙는 점(.)은 html의 태그가 아니고, class 안에 들어가는 변수임을 의미합니다.
+        -->
+    </head>
+    <body>
+        <ol> <!-- 항목을 숫자로 표시하는 목차 태그, 점으로는 <ul> -->
+            <li><a href="1.html"><font color="blue">하이퍼링크를 </font>통해 1번 html을 엽니다.</a></li>
+            <li><a href="2.html" color:red>a 태그에 옵션으로 color:red를 추가했습니다.</a></li>
+            <li><a href="3.html">헤드의 스타일 태그, 즉 css를 통해 a 태그의 스타일을 일괄지정합니다.</a></li>
+            <li><a href="3.html">3, 4번은 따로 태그를 추가하지 않아도 빨간 색으로 표시됩니다.</a></li>
+        </ol>
+    
+        <h1>제일 큰 제목입니다.</h1>
+        <h2>두 번째로 큽니다. h6까지 있습니다.</h2>
+
+        <p><!-- 단락 표시용 태그, 줄바꿈+띄움 역할 -->
+            <a href="index.html" target="_blank", title="마우스에 올려놓으면 표시되는 태그">
+                target="_blank"는 새 탭에서 열기 옵션을 설정합니다. href 태그가 없으면 링크가 안열리겠죠?</a>
+            <br> a 태그를 벗어난 문자이고 br로 줄바꿈 됩니다.
+        </p>
+        <p class="i">이 단락의 margin-top: 40px와 color: gray를 css의 class를 통해 적용했습니다.</p>
+        <p class="j k">class는 2개를 적용할 수 있습니다. 띄어쓰기로 구분합니다.</p>
+        <p>그러나, 2개의 스타일에 상충되는 값이 있을 경우 덮어쓰기 됩니다. style을 위부터 아래로(순차쓰기)읽는다고
+            생각해 봅시다. 그럼 margin-top값이 40px 후 20px로 덮어쓰기되겠죠? 따라서 위의 줄바꿈은 20px로 됩니다.</p>
+        <p class="k" id="j">하지만!! 우선순위가 높은 선택자 id=""를 사용하면 강제로 j 클래스를 적용할 수 있습니다.
+            단, id에 들어가는 변수명은 .j가 아닌 #j로 써야 합니다. 변수명은 쉼표로 구분해 같은 내용을 담을 수 있습니다.</p>
+        <p>
+            h1과 a의 테두리를 보면 h1은 화면 전체를 쓰고, a는 글자 부피 만큼만 씁니다. 이를 각각 block level element와
+            inline element라고 합니다. 이는 속성 display를 설정해줌으로써 바꿀 수 있습니다.
+        </p>
+    </body>
+</html>
